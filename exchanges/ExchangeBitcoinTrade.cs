@@ -14,12 +14,11 @@ using System.Threading.Tasks;
 public class ExchangeBitcoinTrade : ExchangeBase, IExchange
 {
     public static decimal balance_usdt = 0;
-    public static decimal balance_btc = 0;
+    public static decimal balance_bch = 0;
 
     public ExchangeBitcoinTrade()
     {
         this.urlTicker = "https://bitcointrade.com.br";
-        this.key = Program.jConfig["bitcointrade_key"].ToString();
         this.secret = Program.jConfig["bitcointrade_secret"].ToString();
         this.lockQuantity = false;
         this.fee = decimal.Parse( Program.jConfig["bitcointrade_fee"].ToString());
